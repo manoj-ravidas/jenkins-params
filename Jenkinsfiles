@@ -1,0 +1,21 @@
+pipeline{
+    agent any 
+    stages{
+        stage('build'){
+            steps{
+                echo "creating build ${params.ENVIRONMENT} on ${params.PLATFORM} platform"
+            }
+        }
+        stage('Run Automation'){
+            steps{
+                echo "Running Automation on ${params.BROWSER} browser"
+            }
+        }
+        stage('Deploy'){
+            steps{
+                echo "Deploying on server"
+            }
+        }
+        
+    }
+}
